@@ -1,0 +1,32 @@
+<section id="feature" class="transparent-bg top-margin">
+        <div class="container">
+
+            <div class="center wow fadeInDown">
+                <h2>Parish Priest</h2>
+                <p class="lead"><b>“The priesthood is the love of the heart of Jesus. When you see a priest, think of our Lord Jesus Christ.”</b> – St. John Vianney, patron saint of parish priests</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 wow fadeInDown" *ngFor ="let priest of priests"> 
+                    <div class="clients-comments text-center">
+                        <img src="http://localhost{{priest.field_priest_photo}}" class="img-circle" alt="">
+                        
+                        <h4>
+                          <p><br><br><span [innerHTML] = "priest?.title"></span>
+                          <br>
+                          <span class="priest-date">{{priest?.field_start_date}} - {{priest?.field_end_date}}</span>
+                          </p>
+                        </h4>
+                    </div>
+                </div>
+                <!--<div class="col-md-4 wow fadeInDown">
+                    <div class="clients-comments text-center">
+                        <img src="images/client2.png" class="img-circle" alt="">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
+                        <h4><span>-John Doe /</span>  Director of corlate.com</h4>
+                    </div>
+                </div>-->
+           </div>
+
+        </div><!--/.container-->
+    </section><!--/#feature-->

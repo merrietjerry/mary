@@ -1,0 +1,30 @@
+<section id="about-us" class="top-margin">
+  <div class="container">
+
+    <div class="center wow fadeInDown no-padding-bottom">
+      <h2>Image Gallery</h2>
+    </div>
+
+
+    <div class=" center wow fadeInDown">
+      <div class="portfolio-items image-gallery" *ngIf="images">
+        <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3" *ngFor="let image of images">
+          <a routerLink="{{image.path | slice:8}}">
+          <div class="hovereffect">
+            <img class="img-responsive" src="http://localhost{{image.field_cover_image}}" alt="">
+            <div class="overlay">
+              <h2>{{image.title}}</h2>
+            </div>
+          </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  
+
+  </div>
+
+</section>
+
+<p>&nbsp;</p>

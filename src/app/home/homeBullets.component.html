@@ -1,0 +1,51 @@
+<ng-container *ngFor ="let homeBullet of homeBullets">
+    <div *ngIf="homeBullet" class="col-md-4 col-sm-6 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
+        <div class="feature-wrap">
+            <a routerLink="{{homeBullet.path | slice:8}}"><i class="fa {{homeBullet.field_icon_class}}"></i></a>
+            <h2>{{homeBullet.title}}</h2>
+            <h3>{{homeBullet.body_1}}</h3>
+        </div>
+    </div>
+</ng-container>
+<!--
+
+<div class="col-md-4 col-sm-6 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
+    <div class="feature-wrap">
+        <i class="fa fa-thumbs-up"></i>
+        <h2>Get Involved</h2>
+        <h3>God created each of us with a unique blend of...</h3>
+    </div>
+</div>
+
+
+<div class="col-md-4 col-sm-6 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
+    <div class="feature-wrap">
+        <i class="fa fa-bullhorn"></i>
+        <h2>Parish News</h2>
+        <h3>Stay connected with us..</h3>
+    </div>
+</div>
+
+<div class="col-md-4 col-sm-6 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
+    <div class="feature-wrap">
+        <i class="fa fa-bullhorn"></i>
+        <h2>Sub-Stations</h2>
+        <h3>We have two sub-stations with ...</h3>
+    </div>
+</div>
+
+<div class="col-md-4 col-sm-6 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
+    <div class="feature-wrap">
+        <i class="fa fa-bullhorn"></i>
+        <h2>Saint Of the Day</h2>
+        <h3>St. Vincent Kaun <br/> Wednesday, June 20, 2018</h3>
+    </div>
+</div>
+
+<div class="col-md-4 col-sm-6 wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
+    <div class="feature-wrap">
+        <i class="fa fa-bullhorn"></i>
+        <h2>Gallery</h2>
+        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+    </div>
+</div>-->

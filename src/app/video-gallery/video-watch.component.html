@@ -1,0 +1,14 @@
+<section id="about-us" class="top-margin">
+  <div class="container" *ngIf="videoDetail">
+    <div class="center wow fadeInDown">
+
+      <div class="container-video">
+        <iframe [src]="readYouTube(videoDetail.field_youtube_video_id)" frameborder="0" allowfullscreen class="video-video"></iframe>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</section>

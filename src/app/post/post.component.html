@@ -1,0 +1,40 @@
+<section id="about-us" class="top-margin">
+  <div class="container">
+    <div class="center wow fadeInDown no-padding-bottom">
+      <h2>Parish News</h2>
+    </div>
+
+    <ul class="teasers-list" *ngIf="nodeList">
+
+      <li class="teasers-list__item" *ngFor="let node of nodeList">
+        <article class="teaser  " role="article">
+          <footer class="teaser__footer">
+            <span class="pubdate">
+      <i class="fa fa-calendar"></i> 25.06.2018
+  </span>
+            <span class="content-type-label">
+    Circular
+  </span>
+          </footer>
+          <header class="teaser__header">
+
+            <h2 class="teaser__title">
+              <a routerLink="{{node.path | slice:8}}" rel="bookmark"><span>{{node.title}}</span>
+</a>
+            </h2>
+
+          </header>
+          <div class="teaser__content">
+            <div class="teaser__body">
+              Brussels, 25 June 2018 To all ETUC Member Organisations To the Members of the ETUC Women's Committee To the Member of the
+              ETUC Youth Committee Dear colleagues, please find attached the report of this year ETUC Gender Equality Survey.
+              The first part of the report looks at trends in female trade unions' membership and in unions' decision-making
+              positions among ETUC confederations and ETUFs.
+
+            </div>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </div>
+</section>
