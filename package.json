@@ -31,6 +31,7 @@
     "lg-video": "^1.2.2",
     "lg-zoom": "^1.1.0",
     "lightgallery": "^1.6.11",
+    "ngx-sharebuttons": "^4.1.4",
     "rxjs": "^6.2.2",
     "rxjs-compat": "^6.2.2",
     "zone.js": "^0.8.26"

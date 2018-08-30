@@ -10,10 +10,10 @@
         <article class="teaser  " role="article">
           <footer class="teaser__footer">
             <span class="pubdate">
-      <i class="fa fa-calendar"></i> 25.06.2018
+      <i class="fa fa-calendar"></i> {{node.created}}
   </span>
-            <span class="content-type-label">
-    Circular
+            <span class="content-type-label" *ngIf="node.field_category">
+    {{node.field_category}}
   </span>
           </footer>
           <header class="teaser__header">
@@ -26,11 +26,7 @@
           </header>
           <div class="teaser__content">
             <div class="teaser__body">
-              Brussels, 25 June 2018 To all ETUC Member Organisations To the Members of the ETUC Women's Committee To the Member of the
-              ETUC Youth Committee Dear colleagues, please find attached the report of this year ETUC Gender Equality Survey.
-              The first part of the report looks at trends in female trade unions' membership and in unions' decision-making
-              positions among ETUC confederations and ETUFs.
-
+              {{node.body_1}}
             </div>
           </div>
         </article>

@@ -3,6 +3,7 @@ import { DrupalService } from '../drupal.service';
 import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 import { Router, ActivatedRoute, UrlSegment } from '@angular/router';
 
+
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',

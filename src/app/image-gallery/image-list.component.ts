@@ -16,7 +16,7 @@ export class ImageListComponent implements OnInit{
     galleryPath: string;
     node: any;
     thumb: string;
-    private imageList: any[] = [];
+    imageList: any[] = [];
     title: string;
 
     private last: number;

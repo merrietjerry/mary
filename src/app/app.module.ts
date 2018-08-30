@@ -17,6 +17,7 @@ import {ImageListComponent} from './image-gallery/image-list.component';
 import { VideoGalleryComponent } from './video-gallery/video-gallery.component';
 import { VideoWatchComponent } from './video-gallery/video-watch.component';
 import { PostComponent } from './post/post.component';
+import { ShareButtonsModule } from 'ngx-sharebuttons';
 
 
 const appRoutes : Routes = [
@@ -54,7 +55,8 @@ const appRoutes : Routes = [
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    ShareButtonsModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

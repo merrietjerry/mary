@@ -13,9 +13,9 @@ import { TriggerLight, addGalleryClass } from '../../assets/js/custom';
 })
 export class VideoGalleryComponent implements OnInit, DoCheck {
 
-  private Videos: any[] = [];
-  private videosAll: Array<any> = [];
-  private videoCategory: Array<any> = [];
+  Videos: any[] = [];
+  videosAll: Array<any> = [];
+  videoCategory: Array<any> = [];
   //private firstLoad: string = 'firstLoad';
   activeFilter: string = 'all';
 
