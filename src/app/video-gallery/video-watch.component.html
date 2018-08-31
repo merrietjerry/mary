@@ -14,10 +14,14 @@
 
     </div>
 
-<div class="center wow fadeInDown" *ngIf="videoDetail.body">
-      <p>&nbsp;</p><p></p><p>
-      <p class="lead" [innerHTML]="videoDetail.body"></p>
+    <div class="center wow fadeInDown" *ngIf="videoDetail.body">
+      <p>&nbsp;</p>
+      <p></p>
+      <p>
+        <p class="lead" [innerHTML]="videoDetail.body"></p>
+
     </div>
 
+    <socialshare></socialshare>
   </div>
 </section>

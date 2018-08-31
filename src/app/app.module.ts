@@ -1,7 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule , Routes} from '@angular/router';
-import { HttpModule } from '@angular/http';
+import { HttpModule} from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -18,6 +19,7 @@ import { VideoGalleryComponent } from './video-gallery/video-gallery.component';
 import { VideoWatchComponent } from './video-gallery/video-watch.component';
 import { PostComponent } from './post/post.component';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
+import { SocialshareComponent } from './socialshare/socialshare.component';
 
 
 const appRoutes : Routes = [
@@ -50,11 +52,13 @@ const appRoutes : Routes = [
     ImageListComponent,
     VideoGalleryComponent,
     VideoWatchComponent,
-    PostComponent
+    PostComponent,
+    SocialshareComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes),
     ShareButtonsModule.forRoot()
   ],

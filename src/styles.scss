@@ -1,5 +1,8 @@
-/** Import core style */
-@import "~ngx-sharebuttons/styles/share-buttons";
+/** Import core style 
+@import "~ngx-sharebuttons/styles/share-buttons";*/
  
-/** Import a theme */
-@import "~ngx-sharebuttons/styles/themes/circles/circles-theme";
+/** Import a theme 
+@import "~ngx-sharebuttons/styles/themes/circles/circles-theme";*/
+
+@import '~@ngx-share/button/styles/share-buttons';
+@import '~@ngx-share/button/styles/themes/default/default-theme';
