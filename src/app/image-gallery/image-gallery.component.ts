@@ -13,8 +13,11 @@ export class ImageGalleryComponent implements OnInit {
 
   images: any = '';
   private imageList: any[] = [];
+  public baseURL :string;
 
-  constructor(private _drupalService: DrupalService, private _sanitizer: DomSanitizer, route: Router) { }
+  constructor(private _drupalService: DrupalService, private _sanitizer: DomSanitizer, route: Router) {
+    this.baseURL = this._drupalService.baseURL;
+   }
 
   ngOnInit() {
     this._drupalService.getImageGallery().subscribe(res => { this.images = res; });

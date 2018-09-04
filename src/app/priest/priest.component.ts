@@ -11,8 +11,11 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browse
 export class PriestComponent implements OnInit {
 
   priests = [];
+  public baseURL: string;
 
-  constructor(private _drupalService: DrupalService, private _sanitizer: DomSanitizer) { }
+  constructor(private _drupalService: DrupalService, private _sanitizer: DomSanitizer) {
+    this.baseURL = this._drupalService.baseURL;
+   }
 
   ngOnInit() {
     this._drupalService.getPriestPage().subscribe(resPriestList => this.priests = resPriestList);

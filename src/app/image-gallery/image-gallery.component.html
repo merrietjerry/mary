@@ -11,7 +11,7 @@
         <div class="portfolio-item apps col-xs-12 col-sm-4 col-md-3" *ngFor="let image of images">
           <a routerLink="{{image.path | slice:8}}">
           <div class="hovereffect">
-            <img class="img-responsive" src="http://localhost{{image.field_cover_image}}" alt="">
+            <img class="img-responsive" src="{{baseURL+image.field_cover_image}}" alt="">
             <div class="overlay">
               <h2>{{image.title}}</h2>
             </div>
@@ -20,9 +20,6 @@
         </div>
       </div>
     </div>
-
-  
-
   </div>
   <p>&nbsp;</p>
 <socialshare></socialshare>

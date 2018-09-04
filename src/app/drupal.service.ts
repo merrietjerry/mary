@@ -8,9 +8,17 @@ import 'rxjs/add/operator/map';
 
 export class DrupalService {
 
+    // private drupalBasePath: string = 'http://www.ourladyoffatima.in';
+
+    // private apiBasePath : string = 'http://www.ourladyoffatima.in/drupal8/api/';
+
+    // public baseURL: string = 'http://www.ourladyoffatima.in/';
+
     private drupalBasePath: string = 'http://localhost';
 
     private apiBasePath : string = 'http://localhost/drupal8/api/';
+
+    public baseURL: string = 'http://localhost/';
 
     constructor(private _http: Http) { }
 

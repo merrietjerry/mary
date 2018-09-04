@@ -8,7 +8,7 @@
 
         <div class="carousel-inner">
 
-            <div *ngFor="let slide of slideshow ;let i = index" class="item {{i==0 ? 'active' : ''}}" [style.background-image]="getBackground('http://localhost'+slide.field_background)">
+            <div *ngFor="let slide of slideshow ;let i = index" class="item {{i==0 ? 'active' : ''}}" [style.background-image]="getBackground('http://www.ourladyoffatima.in'+slide.field_background)">
                 <div class="container">
                     <div class="row slide-margin">
                         <div class="col-sm-6">
@@ -21,7 +21,7 @@
 
                         <div class="col-sm-6 hidden-xs animation animated-item-4">
                             <div class="slider-img">
-                                <img src="http://localhost{{slide.field_photo}}" class="img-responsive">
+                                <img src="{{baseURL+slide.field_photo}}" class="img-responsive">
                             </div>
                         </div>
 

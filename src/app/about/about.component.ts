@@ -15,8 +15,11 @@ export class AboutComponent implements OnInit {
   isSlideshow : boolean = false;
   coverImage : string = '';
   slideShow : any = '' ;
+  public baseURL: string;
 
-  constructor(private _drupalService: DrupalService, private _sanitizer: DomSanitizer) { }
+  constructor(private _drupalService: DrupalService, private _sanitizer: DomSanitizer) { 
+    this.baseURL = this._drupalService.baseURL;
+  }
 
   ngOnInit() {
     this._drupalService.getAboutPage().subscribe(res => {this.about = res[0]; this.processData(); });

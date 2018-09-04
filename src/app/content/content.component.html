@@ -16,7 +16,7 @@
 
         <div class="carousel-inner">
           <div class="item active" *ngFor="let item of slideShow; let index = index;" [class.active] = "index == 0">
-            <img src="http://localhost/{{item}}" class="img-responsive" alt="">
+            <img src="{{baseURL+item}}" class="img-responsive" alt="">
           </div>
         </div>
 
@@ -31,7 +31,7 @@
     </div>
     <!--/#carousel-slider-->
     <div id="about-slider" *ngIf="!isSlideshow">
-      <img src="http://localhost/{{coverImage}}" class="img-responsive" alt="">
+      <img src="{{baseURL+coverImage}}" class="img-responsive" alt="">
     </div>
 
     <div class="center wow fadeInDown" *ngIf="node.body">

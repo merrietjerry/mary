@@ -10,11 +10,16 @@ import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browse
 })
 export class HomeComponent implements OnInit {
   slideshow = [];
+  public baseURL :string; 
+  public loading = false;
 
-  constructor(private _drupalService: DrupalService, private _sanitizer: DomSanitizer) { }
+  constructor(private _drupalService: DrupalService, private _sanitizer: DomSanitizer) { 
+    this.baseURL = this._drupalService.baseURL;
+  }
 
   ngOnInit() {
-    this._drupalService.getSlideShow().subscribe(resSlideshow => this.slideshow = resSlideshow);
+    this.loading = true;
+    this._drupalService.getSlideShow().subscribe(resSlideshow => {this.slideshow = resSlideshow; this.loading = false;});
   }
 
   getBackground(image) {

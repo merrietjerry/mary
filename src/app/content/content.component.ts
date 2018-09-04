@@ -18,10 +18,12 @@ export class ContentComponent implements OnInit {
   isSlideshow : boolean = false;
   coverImage : string = '';
   slideShow : any = '' ;
+  public baseURL: string;
 
   constructor(private _drupalService: DrupalService, private _sanitizer: DomSanitizer, route: Router) {
     route.events.subscribe((url:any) => url);
     this.path = route.url.substring(1);
+    this.baseURL = this._drupalService.baseURL;
    }
 
   ngOnInit() {

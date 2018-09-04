@@ -9,7 +9,7 @@
             <div class="row">
                 <div class="col-md-4 wow fadeInDown" *ngFor ="let priest of priests"> 
                     <div class="clients-comments text-center">
-                        <img src="http://localhost{{priest.field_priest_photo}}" class="img-circle" alt="">
+                        <img src="{{baseURL+priest.field_priest_photo}}" class="img-circle" alt="">
                         
                         <h4>
                           <p><br><br><span [innerHTML] = "priest?.title"></span>

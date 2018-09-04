@@ -16,7 +16,7 @@
                 
                 <ul>
                     <ng-container *ngFor="let row of Videos; let last = last; let first = first">  
-                    <li class="col-md-4 col-sm-6" *ngIf="row.field_category_1 == activeFilter || activeFilter == 'all'">
+                    <li class="col-xs-12 col-md-4 col-sm-6" *ngIf="row.field_category_1 == activeFilter || activeFilter == 'all'">
                         <a routerLink="/video-gallery/watch/{{row.path | slice : 8}}">
                             <img class="img-responsive" src="https://img.youtube.com/vi/{{row.field_youtube_video_id}}/0.jpg" alt="Thumb-1">
                         </a>

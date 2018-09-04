@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule , Routes} from '@angular/router';
 import { HttpModule} from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingModule } from 'ngx-loading';;
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './footer/footer.component';
@@ -59,9 +60,12 @@ const appRoutes : Routes = [
     BrowserModule,
     HttpModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes),
-    ShareButtonsModule.forRoot()
+    RouterModule.forRoot(appRoutes, {onSameUrlNavigation: 'reload'}),
+    ShareButtonsModule.forRoot(),
+    LoadingModule  
   ],
+  exports: [RouterModule],
+  //providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   providers: [],
   bootstrap: [AppComponent]
 })

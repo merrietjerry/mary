@@ -15,7 +15,7 @@
 
         <div class="carousel-inner">
           <div class="item active" *ngFor="let item of slideShow; let index = index;" [class.active] = "index == 0">
-            <img src="http://localhost/{{item}}" class="img-responsive" alt="">
+            <img src="{{baseURL+item}}" class="img-responsive" alt="">
           </div>
         </div>
 
