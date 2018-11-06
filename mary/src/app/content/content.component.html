@@ -1,0 +1,46 @@
+<section id="about-us" class="top-margin">
+  <div class="container" *ngIf="node">
+    <div class="center wow fadeInDown animated">
+      <h2 [innerHTML] = "node.title"></h2>
+      <p class="lead" [innerHTML]="node.field_quotes"></p>
+      
+    </div>
+
+    <!--/#carousel-slider-->
+    <div id="about-slider" *ngIf="isSlideshow" class="wow fadeInDown animated">
+      <div id="carousel-slider" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators visible-xs">
+          <li *ngFor="let item of slideShow; let index = index;" data-target="#carousel-slider" [attr.data-slide-to]="index" [class.active]="index == 0"></li>
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="item active" *ngFor="let item of slideShow; let index = index;" [class.active] = "index == 0">
+            <img src="{{baseURL+item}}" class="img-responsive" alt="">
+          </div>
+        </div>
+
+        <a class="left carousel-control" href="#carousel-slider" data-slide="prev">
+						<i class="fa fa-angle-left"></i> 
+					</a>
+
+        <a class=" right carousel-control" href="#carousel-slider" data-slide="next">
+						<i class="fa fa-angle-right"></i> 
+					</a>
+      </div>
+    </div>
+    <!--/#carousel-slider-->
+    <div id="about-slider" *ngIf="!isSlideshow" class="wow fadeInDown animated">
+      <img src="{{baseURL+coverImage}}" class="img-responsive" alt="" *ngIf="coverImage">
+    </div>
+
+    <div class="center wow fadeInDown animated" *ngIf="node.body">
+      <p>&nbsp;</p><p></p><p>
+      <p class="lead-body" [innerHTML]="node.body"></p>
+    </div>
+    
+      <socialshare></socialshare>
+
+  </div>
+</section>
+<!--/#bottom-->

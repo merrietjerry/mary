@@ -1,0 +1,32 @@
+<section id="about-us" class="top-margin">
+    <div class="container">
+        <div class="center wow fadeInDown">
+            <h2>Video Gallary</h2>
+          <div class="col-md-12">
+              <ul class="video-category">
+              <li routerLinkActive="active" (click)="changeVideofilter('all')"> <a class="btn btn-default" role="button" routerLink="/video-gallery/all">All</a></li>
+              <ng-container *ngIf="videoCategory">
+                <li *ngFor="let item of videoCategory" routerLinkActive="active" (click)="changeVideofilter(item.id)"> <a class="btn btn-default" role="button" routerLink="/video-gallery/{{item.id}}">{{item.value}}</a></li>
+              </ng-container>
+              </ul>
+              
+           </div>   
+         
+            <div class="demo-gallery videos" *ngIf="Videos">
+                
+                <ul>
+                    <ng-container *ngFor="let row of Videos; let last = last; let first = first">  
+                    <li class="col-xs-12 col-md-4 col-sm-6" *ngIf="row.field_category_1 == activeFilter || activeFilter == 'all'">
+                        <a routerLink="/video-gallery/watch/{{row.path | slice : 8}}">
+                            <img class="img-responsive" src="https://img.youtube.com/vi/{{row.field_youtube_video_id}}/0.jpg" alt="Thumb-1">
+                        </a>
+                    </li>
+                    </ng-container>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+   <br/> <br/> <socialshare></socialshare>
+</section>

@@ -1,0 +1,43 @@
+<section id="bottom">
+        <div class="container wow fadeInDown animated" data-wow-duration="1000ms" data-wow-delay="600ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 600ms; animation-name: fadeInDown;">
+            <div class="row">
+                <div class="col-md-3 col-sm-12">
+                    <div class="widget mass-time">
+                        <h3>Mass Time</h3>
+                        <p>Sunday 7 am Rosary</p>
+                        <p>Sunday 7.30 am Holy Mass</p><br/>
+                        <p>Wednesday 6.00 pm Holy Mass</p>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-9 col-sm-12">
+                    <div class="widget footer-menu" >
+                        <ul *ngIf="footerMenu">
+                            <li *ngFor = "let menuItem of footerMenu" routerLinkActive="active"><a routerLink="{{menuItem.field_menu_url}}">{{menuItem.field_menu_label}}</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section>
+
+<footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2018 <a target="_blank" href="#" title="Our Lady of Fatima, Kallaravilai">Our Lady of Fatima, Kallaravilai</a>. All Rights Reserved.
+                </div>
+                <div class="col-sm-6 col-xs-8">
+                       <div class="social">
+                            <ul class="social-share">
+                                <li><a href="https://www.facebook.com/stfathimamathachurch" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCqFdKZkTk-xNuM9yHuPAROA" target="_blank"><i class="fa fa-youtube"></i></a></li>
+                                <!-- <li><a href="#"><i class="fa fa-linkedin"></i></a></li> 
+                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fa fa-skype"></i></a></li> -->
+                            </ul>
+                       </div>
+                    </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->

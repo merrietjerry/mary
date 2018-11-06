@@ -1,0 +1,150 @@
+<section id="main-slider" class="no-margin visible-xs wow fadeInDown animated">
+    <div class="carousel slide" data-ride="carousel" data-interval="7000" data-pause="false">
+        <ol class="carousel-indicators">
+            <li *ngFor="let slide of slideshow ;let i = index" class="{{i==0 ? 'active' : ''}}" data-target="#main-slider" [attr.data-slide-to]="i"></li>
+        </ol>
+
+        <div class="carousel-inner">
+
+            <div *ngFor="let slide of slideshow ;let i = index" class="mobile-home item {{i==0 ? 'active' : ''}}" [style.background-image]="getBackground('http://www.ourladyoffatima.in'+slide.field_background)">
+                <div class="container">
+                    <div class="row slide-margin">
+                        <div class="col-sm-6">
+                            <div class="carousel-content">
+                                <h1 class="animation animated-item-1" [innerHTML]="slide.field_main_title"></h1>
+                                <h2 class="animation animated-item-2" [innerHTML]="slide.field_sub_title"></h2>
+                                <a class="btn-slide animation animated-item-3" routerLink="/{{slide.path | slice:7}}">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 animation animated-item-4 img-obj" *ngIf="slide.field_photo">
+                            <div class="slider-img">
+                                <img src="{{baseURL+slide.field_photo}}" class="img-responsive">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--/.item-->
+
+        </div>
+        <!--/.carousel-inner-->
+    </div>
+        <!--/.carousel-->
+        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+    <a class="next hidden-xs" href="#main-slider" data-slide="next">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+</section>
+
+
+<section id="main-slider1" class="no-margin hidden-xs wow fadeInDown animated">
+<div class="carousel slide" data-ride="carousel" data-interval="7000" data-pause="false">
+        <ol class="carousel-indicators">
+            <li *ngFor="let slide of slideshow ;let i = index" class="{{i==0 ? 'active' : ''}}" data-target="#main-slider1" [attr.data-slide-to]="i"></li>
+        </ol>
+
+        <div class="carousel-inner">
+
+            <div *ngFor="let slide of slideshow ;let i = index" class="hidden-xs item {{i==0 ? 'active' : ''}}" [style.background-image]="getBackground('http://www.ourladyoffatima.in'+slide.field_background)">
+                <div class="container">
+                    <div class="row slide-margin">
+                        <div class="col-sm-6">
+                            <div class="carousel-content">
+                                <h1 class="animation animated-item-1" [innerHTML]="slide.field_main_title"></h1>
+                                <h2 class="animation animated-item-2" [innerHTML]="slide.field_sub_title"></h2>
+                                <a class="btn-slide animation animated-item-3" routerLink="/{{slide.path | slice:7}}">Read More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 hidden-xs animation animated-item-4" *ngIf="slide.field_photo">
+                            <div class="slider-img">
+                                <img src="{{baseURL+slide.field_photo}}" class="img-responsive">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--/.item-->
+
+        </div>
+        <!--/.carousel-inner-->
+    </div>
+
+
+
+    <!--/.carousel-->
+    <a class="prev hidden-xs" href="#main-slider1" data-slide="prev">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+    <a class="next hidden-xs" href="#main-slider1" data-slide="next">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+</section>
+<!--/#main-slider-->
+
+
+
+
+<section>
+    <div class="container">
+         <div class="row">
+
+             <div class="col-sm-12 col-md-12">
+                <div class="col-md-3 wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;" *ngIf="bishop">
+                    <div class="clients-comments text-center from-priest">
+                        <img src="{{baseURL+bishop.field_priest_photo}}" class="img-circle" alt="{{bishop.title}}">
+                        <br/><br/>
+                        <h4>
+                            <span>{{bishop.title}}</span><br>
+                            <i>{{bishop.body}}</i>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-md-3 wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;" *ngIf="priestHome">
+                    <div class="clients-comments text-center from-priest">
+                        <img src="{{baseURL+priestHome.field_priest_photo}}" class="img-circle" alt="{{priestHome.title}}">
+                        <br/><br/>
+                        <h4>
+                            <span>{{priestHome.title}}</span><br>
+                            <i>Parish Priest, KallaraVilai</i>
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-md-6 wow fadeInDown animated" style="visibility: visible; animation-name: fadeInDown;" *ngIf="priestHome">
+                    <div class="from-priest-body" [innerHTML] = "priestHome.body">
+                    </div>
+                </div>
+                
+             </div>
+
+                                                
+         </div><!--/.row-->
+     </div><!--/.container-->
+ </section>
+
+
+
+
+<section id="feature" class="feature-home">
+    <div class="container">
+
+        <div class="row">
+            <div class="features">
+
+                <home-bullets></home-bullets>
+
+            </div>
+            <!--/.services-->
+        </div>
+
+    </div>
+    <!--/.container-->
+</section>
+

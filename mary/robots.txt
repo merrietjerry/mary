@@ -1,0 +1,47 @@
+#
+# robots.txt
+#
+# This file is to prevent the crawling and indexing of certain parts
+# of your site by web crawlers and spiders run by sites like Yahoo!
+# and Google. By telling these "robots" where not to go on your site,
+# you save bandwidth and server resources.
+#
+# This file will be ignored unless it is at the root of your host:
+# Used:    http://example.com/robots.txt
+# Ignored: http://example.com/site/robots.txt
+#
+# For more information about the robots.txt standard, see:
+# http://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+# CSS, JS, Images
+
+# Directories
+Disallow: /church/
+Disallow: /church/core/
+Disallow: /church/profiles/
+# Files
+Disallow: /church/README.txt
+Disallow: /church/web.config
+# Paths (clean URLs)
+Disallow: /church/admin/
+Disallow: /church/admin/
+Disallow: /church/comment/reply/
+Disallow: /church/filter/tips/
+Disallow: /church/node/add/
+Disallow: /church/search/
+Disallow: /church/user/register/
+Disallow: /church/user/password/
+Disallow: /church/user/login/
+Disallow: /church/user/logout/
+# Paths (no clean URLs)
+Disallow: /church/index.php/
+Disallow: /church/index.php/admin/
+Disallow: /church/index.php/comment/reply/
+Disallow: /church/index.php/filter/tips/
+Disallow: /church/index.php/node/add/
+Disallow: /church/index.php/search/
+Disallow: /church/index.php/user/password/
+Disallow: /church/index.php/user/register/
+Disallow: /church/index.php/user/login/
+Disallow: /church/index.php/user/logout/

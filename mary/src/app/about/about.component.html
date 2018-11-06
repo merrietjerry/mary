@@ -1,0 +1,41 @@
+<section id="about-us" class="top-margin">
+  <div class="container">
+    <div class="center wow fadeInDown animated">
+      <h2 [innerHTML] = "about.title"></h2>
+      <p class="lead" [innerHTML]="about.body"></p>
+    </div>
+
+    <!--/#carousel-slider-->
+    <div id="about-slider" *ngIf="isSlideshow" class="wow fadeInDown animated">
+      <div id="carousel-slider" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators visible-xs">
+          <li *ngFor="let item of slideShow; let index = index;" data-target="#carousel-slider" [attr.data-slide-to]="index" [class.active]="index == 0"></li>
+        </ol>
+
+        <div class="carousel-inner">
+          <div class="item active" *ngFor="let item of slideShow; let index = index;" [class.active] = "index == 0">
+            <img src="{{baseURL+item}}" class="img-responsive" alt="">
+          </div>
+        </div>
+
+        <a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
+						<i class="fa fa-angle-left"></i> 
+					</a>
+
+        <a class=" right carousel-control hidden-xs" href="#carousel-slider" data-slide="next">
+						<i class="fa fa-angle-right"></i> 
+					</a>
+      </div>
+    </div>
+    <!--/#carousel-slider-->
+
+    <div class="center wow fadeInDown animated">
+      <p></p><p></p><br>
+      <p class="lead" [innerHTML]="about.field_below_slider"></p>
+    </div>
+
+  </div>
+  <socialshare></socialshare>
+</section>
+<!--/#bottom-->
